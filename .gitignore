@@ -1,0 +1,5 @@
+# Text backup files
+*.bak
+.idea
+# Database
+*.sqlite3
