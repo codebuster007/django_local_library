@@ -13,6 +13,11 @@ from catalog.forms import RenewBookForm
 from catalog.models import Book, BookInstance, Author, Genre
 
 
+def error_404_view(request, exception):
+    data = {}
+    return render(request, 'catalog/error_404.html', data)
+
+
 # @login_required
 def index(request):
     """View function for the home page of the site."""

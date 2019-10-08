@@ -1,5 +1,6 @@
 from django.urls import path, re_path
 from . import views
+from django.conf.urls import handler404 as handley
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -30,3 +31,5 @@ urlpatterns += [
     path('book/<int:pk>/update/', views.BookUpdate.as_view(), name='book_update'),
     path('book/<int:pk>/delete/', views.BookDelete.as_view(), name='book_delete'),
 ]
+
+handley = 'catalog.views.error_404_view'
